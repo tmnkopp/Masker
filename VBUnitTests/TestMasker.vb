@@ -9,7 +9,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Dim Actual As String = IPADDRESS.CSMaskCIDR()
         Assert.AreEqual("***.***.***.???", Actual)
     End Sub
-    `   <TestMethod()> Public Sub MaskCode_Resolves()
+    <TestMethod()> Public Sub MaskCode_Resolves()
         Dim Masker As Masker = New Masker("1.2.333.444", "IPADDRESS")
         Assert.IsNotNull(Masker.Masked)
     End Sub
