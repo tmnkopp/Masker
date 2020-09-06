@@ -78,7 +78,8 @@
     <Import Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.vb" />
+    <Compile Include="TestMasker.vb" />
+    <Compile Include="TestProvider.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -104,6 +105,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -114,6 +116,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaskerCore\MaskerCore.csproj">
+      <Project>{c8904794-f996-4c7b-956b-dca30b2df62d}</Project>
+      <Name>MaskerCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
